@@ -1,0 +1,37 @@
+meta:
+  id: jung_archetypes_9_v1
+  title: 原型·九宫
+  free: true
+questions:
+  - id: q1
+    text: 你更看重哪种力量？
+    options:
+      - id: a
+        text: 创造
+        weights: { creator: 2 }
+      - id: b
+        text: 关怀
+        weights: { caregiver: 2 }
+      - id: c
+        text: 自由
+        weights: { explorer: 2 }
+mapping:
+  result_keys: [creator, caregiver, explorer]
+  to_templates:
+    - when: creator >= 2
+      template: result_creator
+    - when: caregiver >= 2
+      template: result_caregiver
+    - when: explorer >= 2
+      template: result_explorer
+templates:
+  result_creator:
+    title: 创造者原型
+    summary: 你以构建新事物为乐，秩序来自于设计。
+  result_caregiver:
+    title: 关怀者原型
+    summary: 你以支持他人为先，安全感来自守护。
+  result_explorer:
+    title: 探索者原型
+    summary: 你以探索边界为荣，成长在于冒险。
+

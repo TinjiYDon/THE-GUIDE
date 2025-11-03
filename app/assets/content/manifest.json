@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "items": [
+    { "id": "tarot_three_cards_v1", "path": "tarot_three_cards_v1.yaml", "title": "赛博塔罗·三卡", "free": true },
+    { "id": "jung_archetypes_9_v1", "path": "jung_archetypes_9_v1.yaml", "title": "原型·九宫", "free": true },
+    { "id": "mbti_lite_v1", "path": "mbti_lite_v1.yaml", "title": "MBTI·Lite", "free": false }
+  ]
+}
+

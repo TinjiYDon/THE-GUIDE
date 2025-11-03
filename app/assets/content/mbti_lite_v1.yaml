@@ -1,0 +1,29 @@
+meta:
+  id: mbti_lite_v1
+  title: MBTI·Lite
+  free: true
+questions:
+  - id: q1
+    text: 聚会中你更倾向于？
+    options:
+      - id: a
+        text: 结识新朋友
+        weights: { E: 1 }
+      - id: b
+        text: 与熟悉的人深入聊
+        weights: { I: 1 }
+mapping:
+  result_keys: [E, I]
+  to_templates:
+    - when: E >= 1
+      template: result_e
+    - when: I >= 1
+      template: result_i
+templates:
+  result_e:
+    title: 倾向外向（E）
+    summary: 你从人与场域中获取能量。
+  result_i:
+    title: 倾向内向（I）
+    summary: 你从独处与深度思考中恢复能量。
+

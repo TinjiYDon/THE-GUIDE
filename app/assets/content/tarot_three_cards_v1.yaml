@@ -1,0 +1,49 @@
+meta:
+  id: tarot_three_cards_v1
+  title: 赛博塔罗·三卡
+  free: true
+questions:
+  - id: q1
+    text: 近期你最在意的主题？
+    options:
+      - id: a
+        text: 关系
+        weights: { love: 2 }
+      - id: b
+        text: 金钱
+        weights: { wealth: 2 }
+      - id: c
+        text: 自我成长
+        weights: { growth: 2 }
+logic:
+  random:
+    seed_from: time
+mapping:
+  result_keys: [love, wealth, growth]
+  to_templates:
+    - when: love >= 2
+      template: result_love_01
+    - when: wealth >= 2
+      template: result_wealth_01
+    - when: growth >= 2
+      template: result_growth_01
+templates:
+  result_love_01:
+    title: 关于关系的启示
+    summary: 你的能量聚焦在关系与连接上。
+    advice:
+      - 放下控制，给对方空间
+      - 以“倾听”代替“反驳”
+  result_wealth_01:
+    title: 关于财富的讯息
+    summary: 近期适合做减法，聚焦一条清晰路径。
+    advice:
+      - 记录每一笔支出
+      - 为最重要的目标设置时间盒
+  result_growth_01:
+    title: 关于成长的路标
+    summary: 学习的窗口期已经打开，别等“完美时机”。
+    advice:
+      - 先做一个能完成的小项目
+      - 每天固定 30 分钟学习时间
+
